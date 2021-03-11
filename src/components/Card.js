@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ThemedButton from "./ThemedButton";
+import Style from '../components/Card.module.css';
 
 const Card = (props) => {
     const [localState, setLocalState] = useState(false);
@@ -9,14 +9,13 @@ const Card = (props) => {
     }, [localState])
 
     return (
-        <>
-        <ThemedButton />
-        <button onClick={() => setLocalState()}>CLICK ME</button>
-            <section>
-                <img src={props.data.img} width="200" height="200"></img>
-                <h3>{props.data.name}</h3>
-            </section>
-        </>
+        <section className={Style.cards}>
+                <section>
+                    <img src={props.data.img} width="150"></img>
+                    <h3>{props.data.name}</h3>
+                    <button onClick={() => setLocalState()}>CLICK ME</button>
+                </section>
+        </section>
     );
 }
 
