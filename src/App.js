@@ -1,32 +1,18 @@
-import React, { useEffect, useState } from 'react';
 import './App.css';
-import Card from './components/Card';
-import Clock from './components/Clock';
+import {Switch, Route} from 'react-router-dom';
+import Home from './components/Home.js';
+import About from './components/About.js';
 
 
 function App() {
-  let rolemodels = require('./assets/wit.json');
-  const [currentRolemodel, setCurrentRolemodel] = useState('Rolemodels');
-  
-  console.log(rolemodels);
-
-  useEffect(() => {
-    document.title = currentRolemodel;
-  }, [currentRolemodel]);
 
   return (
     <div className="App">
-      <header>
-        <h1>International Womens Day</h1>
-        <Clock />
-      </header>
-      <main className="cardContainer">
-        {
-          rolemodels.map((rolemodel, index) =>  
-            <Card onClick={() => setCurrentRolemodel(rolemodel.name)} key={index} data={rolemodel} />
-          )
-        }
-      </main>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/about:id' component={About}/>
+      </Switch>
+      
     </div>
   );
 }
