@@ -11,9 +11,9 @@ const Home = () => {
   
     return ( 
         <section>
-            <header>
+            <header className="header">
                 <h1>International Womens Day</h1>
-                <Clock className="clock"/>
+                <Clock />
             </header>
                 <Navigation />
                 <main className="cardContainer">

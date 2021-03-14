@@ -25,7 +25,7 @@ class Clock extends Component {
 
     render() { 
         return ( 
-            <article>
+            <article className="timeShow">
                 <p>{this.state.date.toLocaleTimeString()}</p>
             </article>
          );

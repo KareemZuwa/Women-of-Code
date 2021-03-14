@@ -12,10 +12,10 @@ const Card = (props) => {
                 <section>
                     <img src={props.data.img} width="150" height="150" alt={props.data.name}></img>
                     <h3>{props.data.name}</h3>
-                    <Link to={{
+                    <Link className={Style.link} to={{
                         pathname: 'About:' + id,
                         state: { data }
-                        }}>Read More</Link>
+                    }}>Read More</Link>
                 </section>
         </section>
     );

@@ -1,19 +1,37 @@
 .App {
   margin: 0 auto;
-  width: 80vw;
+  
   text-align: center;
+}
+.header {
+  margin: 0 auto;
+  background-color: #FF6855;
+  padding: 4rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.header h1{
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  padding:1rem 0 2rem;
 }
 
 .cardContainer {
   margin:0 auto;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 2rem;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
-.clock {
-  width: 50vw;
+.timeShow p {
+  color: white;
+  font-size: 1.7rem;
 }
